@@ -20,7 +20,7 @@ const cartItemModel = mongoose.model("cartItems", cartItemSchema);
 const orderSchema = new Schema(
   {
     products: [cartItemSchema],
-    transactionId: {},
+    transaction_id: {},
     amount: Number,
     address: String,
     status: {
@@ -34,7 +34,6 @@ const orderSchema = new Schema(
         "Cancelled",
       ],
     },
-    updatedAt: Date,
     user: {
       type: ObjectId,
       ref: "users",
